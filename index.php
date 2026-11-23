@@ -205,9 +205,9 @@ $persentase = $total_tugas > 0 ? round(($tugas_selesai / $total_tugas) * 100) : 
                                     </td>
                                     <td><?= date('d M Y', strtotime($row['deadline'])); ?></td>
                                     <td>
-                                        <span class="priority-dot <?= strtolower($row['prioritas']); ?>"></span>
-                                        <?= $row['prioritas']; ?>
-                                    </td>
+    <span class="priority-dot <?= strtolower($row['prioritas']); ?>"></span>
+    <?= ($row['prioritas'] == 'Sedang') ? 'Normal' : htmlspecialchars($row['prioritas']); ?>
+</td>
                                     <td>
                                         <span class="status-badge <?= strtolower($row['status']); ?>">
                                             <?= $row['status']; ?>

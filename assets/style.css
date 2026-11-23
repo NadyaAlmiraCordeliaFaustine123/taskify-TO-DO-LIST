@@ -415,9 +415,9 @@ td {
     display: inline-block;
     margin-right: 4px;
 }
-.priority-dot.tinggi { background-color: #ef4444; }
-.priority-dot.sedang { background-color: #f59e0b; }
-.priority-dot.rendah { background-color: #3b82f6; }
+.priority-dot.tinggi { background-color: #ef4444; } /* merah */
+.priority-dot.sedang { background-color: #f59e0b; } /* kuning terang biar gampang kelihatan bedanya */
+.priority-dot.rendah { background-color: #3b82f6; } /* biru */
 
 .status-badge {
     padding: 4px 10px;
