@@ -84,15 +84,9 @@ $persentase = $total_tugas > 0 ? round(($tugas_selesai / $total_tugas) * 100) : 
         <!-- MAIN CONTENT -->
         <main class="main-content">
             <!-- TOP BAR -->
-            <header class="topbar">
-                <div class="search-box">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="text" placeholder="Cari tugas, proyek, label....">
-                </div>
-                <div class="date-display">
-                    <i class="fa-regular fa-calendar"></i> Kamis, 24 Oktober 2024
-                </div>
-            </header>
+<header class="topbar">
+    <div></div>
+</header>
 
             <!-- GREETING & BANNER -->
             <section class="welcome-section">

@@ -202,16 +202,10 @@ if(mysqli_num_rows($result_tasks) == 0) {
         <!-- MAIN CONTENT -->
         <main class="main-content">
             <!-- TOP BAR -->
-            <header class="topbar">
-                <div class="search-box">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="text" placeholder="Cari tugas, proyek, label....">
-                </div>
-                <div class="topbar-right" style="display: flex; align-items: center; gap: 20px;">
-                    <div class="date-display"><i class="fa-regular fa-calendar"></i> Rabu, 11 November 2026</div>
-                    <div class="user-mini" style="font-size: 14px; font-weight: 500;"><i class="fa-solid fa-circle-user" style="color: #4f46e5;"></i> Halo, Nadya!</div>
-                </div>
-            </header>
+          <!-- TOP BAR -->
+<header class="topbar">
+    <div></div>
+</header>
 
             <!-- HEADER HALAMAN -->
             <div class="welcome-section">
