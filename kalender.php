@@ -195,6 +195,12 @@ if(mysqli_num_rows($result_tasks) == 0) {
             <div class="menu-section preferensi">
                 <p class="menu-label">PREFERENSI</p>
                 <ul>
+                    <li>
+                        <a href="#" id="darkModeToggle">
+                            <i class="fa-solid fa-moon" id="darkModeIcon"></i>
+                            <span id="darkModeText">Mode Gelap</span>
+                        </a>
+                    </li>
                     <li><a href="#"><i class="fa-solid fa-right-from-bracket"></i> Keluar</a></li>
                 </ul>
             </div>
@@ -202,7 +208,6 @@ if(mysqli_num_rows($result_tasks) == 0) {
 
         <!-- MAIN CONTENT -->
         <main class="main-content">
-            <!-- TOP BAR -->
           <!-- TOP BAR -->
 <header class="topbar">
     <div></div>
@@ -356,6 +361,39 @@ if(mysqli_num_rows($result_tasks) == 0) {
             </div>
         </main>
     </div>
+<script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const darkModeIcon = document.getElementById('darkModeIcon');
+        const darkModeText = document.getElementById('darkModeText');
+        const htmlElement = document.documentElement;
 
+        function setDarkMode(isDark) {
+            if (isDark) {
+                htmlElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                if (darkModeIcon) darkModeIcon.classList.replace('fa-moon', 'fa-sun');
+                if (darkModeText) darkModeText.textContent = 'Mode Terang';
+            } else {
+                htmlElement.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+                if (darkModeIcon) darkModeIcon.classList.replace('fa-sun', 'fa-moon');
+                if (darkModeText) darkModeText.textContent = 'Mode Gelap';
+            }
+        }
+
+        // Terapkan tema tersimpan saat halaman dibuka
+        if (localStorage.getItem('theme') === 'dark') {
+            setDarkMode(true);
+        }
+
+        // Toggle saat tombol diklik
+        if (darkModeToggle) {
+            darkModeToggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                const isDark = htmlElement.getAttribute('data-theme') === 'dark';
+                setDarkMode(!isDark);
+            });
+        }
+    </script>
 </body>
 </html>
