@@ -188,6 +188,7 @@ if(mysqli_num_rows($result_tasks) == 0) {
             </a>
         </li>
         <li class="active"><a href="kalender.php"><i class="fa-solid fa-calendar-days"></i> Kalender</a></li>
+        <li><a href="statistik.php"><i class="fa-solid fa-chart-pie"></i> Statistik</a></li>
     </ul>
 </div>
 

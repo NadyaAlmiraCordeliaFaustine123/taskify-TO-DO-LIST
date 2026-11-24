@@ -77,36 +77,36 @@ while ($row_p = mysqli_fetch_assoc($res_prioritas)) {
     <div class="app-container">
         <!-- SIDEBAR -->
         <aside class="sidebar">
-            <div>
-                <div class="brand">
-                    <h2><i class="fa-solid fa-list-check"></i> Taskify</h2>
-                </div>
-                <div class="user-profile">
-                    <div class="avatar">N</div>
-                    <div class="user-info">
-                        <h4>Nadya Almira</h4>
-                        <p>Product Designer</p>
-                    </div>
-                </div>
-
-                <div class="menu-section">
-                    <p class="menu-label">MENU UTAMA</p>
-                    <ul>
-                        <li><a href="index.php"><i class="fa-solid fa-house"></i> Dashboard</a></li>
-                        <li>
-                            <a href="index.php#tabel-tugas">
-                                <i class="fa-solid fa-list-check"></i> Tugas Saya
-                                <?php if($badge_tertunda > 0): ?>
-                                    <span class="sidebar-badge"><?= $badge_tertunda; ?></span>
-                                <?php endif; ?>
-                            </a>
-                        </li>
-                        <li><a href="kalender.php"><i class="fa-solid fa-calendar-days"></i> Kalender</a></li>
-                        <li class="active"><a href="statistik.php"><i class="fa-solid fa-chart-pie"></i> Statistik</a></li>
-                    </ul>
+            <div class="brand">
+                <h2><i class="fa-solid fa-list-check"></i> Taskify</h2>
+            </div>
+            <div class="user-profile">
+                <div class="avatar">N</div>
+                <div class="user-info">
+                    <h4>Nadya Almira</h4>
+                    <p>Product Designer</p>
                 </div>
             </div>
 
+            <!-- MENU UTAMA -->
+            <div class="menu-section">
+                <p class="menu-label">MENU UTAMA</p>
+                <ul>
+                    <li><a href="index.php"><i class="fa-solid fa-house"></i> Dashboard</a></li>
+                    <li>
+                        <a href="index.php#tabel-tugas">
+                            <i class="fa-solid fa-list-check"></i> Tugas Saya
+                            <?php if($badge_tertunda > 0): ?>
+                                <span class="sidebar-badge"><?= $badge_tertunda; ?></span>
+                            <?php endif; ?>
+                        </a>
+                    </li>
+                    <li><a href="kalender.php"><i class="fa-solid fa-calendar-days"></i> Kalender</a></li>
+                    <li class="active"><a href="statistik.php"><i class="fa-solid fa-chart-pie"></i> Statistik</a></li>
+                </ul>
+            </div>
+
+            <!-- MENU PREFERENSI -->
             <div class="menu-section preferensi">
                 <p class="menu-label">PREFERENSI</p>
                 <ul>
