@@ -1,4 +1,10 @@
 <?php
+session_start();
+if (!isset($_SESSION['user_id'])) {
+    header("Location: login.php");
+    exit;
+}
+
 include 'koneksi.php';
 
 // Ambil statistik kalender dari database
@@ -201,7 +207,7 @@ if(mysqli_num_rows($result_tasks) == 0) {
                             <span id="darkModeText">Mode Gelap</span>
                         </a>
                     </li>
-                    <li><a href="#"><i class="fa-solid fa-right-from-bracket"></i> Keluar</a></li>
+                    <li><a href="logout.php"><i class="fa-solid fa-right-from-bracket"></i> Keluar</a></li>
                 </ul>
             </div>
         </aside>

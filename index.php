@@ -1,4 +1,10 @@
 <?php
+session_start();
+if (!isset($_SESSION['user_id'])) {
+    header("Location: login.php");
+    exit;
+}
+
 include 'koneksi.php';
 
 // Ambil pencarian & filter jika ada
@@ -76,7 +82,7 @@ $persentase = $total_tugas > 0 ? round(($tugas_selesai / $total_tugas) * 100) : 
                             <span id="darkModeText">Mode Gelap</span>
                         </a>
                     </li>
-                    <li><a href="#"><i class="fa-solid fa-right-from-bracket"></i> Keluar</a></li>
+                    <li><a href="logout.php"><i class="fa-solid fa-right-from-bracket"></i> Keluar</a></li>
                 </ul>
             </div>
         </aside>
