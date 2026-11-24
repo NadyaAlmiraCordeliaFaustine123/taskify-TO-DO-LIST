@@ -36,7 +36,6 @@ $persentase = $total_tugas > 0 ? round(($tugas_selesai / $total_tugas) * 100) : 
 
     <div class="app-container">
         <!-- SIDEBAR -->
-        <!-- SIDEBAR -->
         <aside class="sidebar">
             <div class="brand">
                 <h2><i class="fa-solid fa-list-check"></i> Taskify</h2>
@@ -63,6 +62,7 @@ $persentase = $total_tugas > 0 ? round(($tugas_selesai / $total_tugas) * 100) : 
     </a>
 </li>
                     <li><a href="kalender.php"><i class="fa-solid fa-calendar-days"></i> Kalender</a></li>
+                    <li><a href="statistik.php"><i class="fa-solid fa-chart-pie"></i> Statistik</a></li>
                 </ul>
             </div>
 
